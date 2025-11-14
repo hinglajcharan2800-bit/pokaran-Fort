@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fort Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Black background */
+            color: #ffffff; /* White text for contrast */
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: 20px auto; /* Small margin */
+            overflow: hidden;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+        }
+        .slide img {
+            width: 100%;
+            height: 400px; /* Big images */
+            object-fit: cover;
+        }
+        .content {
+            padding: 20px; /* Small padding */
+            background-color: #000000;
+            color: #ffffff;
+            max-width: 1200px; /* Limit width for readability */
+            margin: 0 auto; /* Center content */
+        }
+        h1, h2 {
+            color: #0000ff; /* Blue headings */
+        }
+        p {
+            color: #ffffff;
+        }
+        .bottom-images {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Small space between images */
+            padding: 20px;
+            background-color: #000000;
+            flex-wrap: wrap; /* Wrap on smaller screens */
+        }
+        .bottom-images img {
+            width: 200px; /* Adjust size as needed, kept reasonable */
+            height: auto;
+            max-width: 100%; /* Responsive */
+        }
+        /* Auto-sliding animation */
+        .fade {
+            animation: fade 3s infinite; /* 3 seconds per slide */
+        }
+        @keyframes fade {
+            0% { opacity: 0; }
+            20% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .slide img {
+                height: 250px; /* Smaller height on mobile */
+            }
+            .bottom-images img {
+                width: 150px; /* Smaller images on mobile */
+            }
+            .content {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="F2.png" alt="Fort Slide 1">
+        </div>
+        <div class="slide fade">
+            <img src="F3.png" alt="Fort Slide 2">
+        </div>
+        <div class="slide fade">
+            <img src="F11.png" alt="Fort Slide 3">
+        </div>
+        <div class="slide fade">
+            <img src="F10.png" alt="Fort Slide 4">
+        </div>
+        <div class="slide fade">
+            <img src="F4.png" alt="Fort Slide 5">
+        </div>
+        <div class="slide fade">
+            <img src="hhhhhhhhhhhhhhhhhh1.png" alt="Fort Slide 6"> <!-- Corrected from "hhhhhhhhhhhhhhhhhh1.png" assuming it's F1.png -->
+        </div>
+    </div>
+
+    <div class="content">
+        <h1 align="center">Welcome to the Fort</h1>
+        <p>This is a paragraph about the fort. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        
+        <h2>History of the Fort</h2>
+        <p>Pokhran Fort, also known as Balagarh, is a 14th-century fort built by the Rathore clan in Rajasthan, known for its intricate Rajput architecture, dual residential and defensive roles, and a museum showcasing royal artifacts. It is located in the town of Pokhran, famous for the nearby Pokhran Test Range, where India conducted its first nuclear test, codenamed "Smiling Buddha," in 1974. Notable features
+Museum: The fort complex includes a museum that displays a collection of royal armor, weapons, and Pokhran pottery. 
+Murals: The fort walls are adorned with beautifully crafted murals that depict various aspects of Rajput culture and history. 
+Temple: A small red sandstone temple dedicated to Goddess Durga is also part of the fort complex. 
+Connection to nuclear tests
+Location: The nearby Pokhran Test Range is famous as the site of India's first nuclear test on May 18, 1974, codenamed "Smiling Buddha".
+Significance: This test marked India's entry into the group of nuclear-powered nations.</p>
+
+        <h1 align="right">History and architecture</h1>
+        <p>Construction: The fort was built in the 14th century by the Rathore clan of Rajputs, though some sources attribute its construction to Rao Maldeo. 
+Purpose: It served a dual purpose as a residential palace for the ruling family and a defensive stronghold. 
+Architectural style: It showcases detailed Rajput architecture with grand gates, intricate carvings, and jharokhas (overhanging enclosed balconies). 
+Location: The fort is situated in Pokhran, a town in Rajasthan, which is also the site of the Pokhran Test Range.</p>
+    </div>
+
+    <div class="bottom-images">
+        <img src="F5.png" alt="Fort Image 1">
+        <img src="F6.png" alt="Fort Image 2">
+        <img src="F9.png" alt="Fort Image 3">
+    </div>
+    <h5 style="color: red;" align="center">H.d.c_28</h5>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+    </script>
+</body>
+</html>
+
+
